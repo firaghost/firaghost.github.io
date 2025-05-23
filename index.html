@@ -1,70 +1,590 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page - Legal Case Management System</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Legal Case Management System | Login</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <style media="screen">
+        :root {
+            --primary-color: #0badf8;
+            --primary-dark: #0892d0;
+            --text-color: #ffffff;
+            --bg-color: #080710;
+            --form-bg: rgba(0,0,0,0.3);
+            --border-color: rgba(255,255,255,0.1);
+            --shadow-color: rgba(8,7,16,0.6);
+            --input-bg: rgba(255,255,255,0.07);
+            --input-focus-color: #0badf8;
+            --input-shadow: rgba(26, 143, 180, 0.3);
+        }
+        
+        [data-theme="dark"] {
+            --primary-color: #0badf8;
+            --primary-dark: #0892d0;
+            --text-color: #ffffff;
+            --bg-color: #080710;
+            --form-bg: rgba(0,0,0,0.3);
+            --border-color: rgba(255,255,255,0.1);
+            --shadow-color: rgba(8,7,16,0.6);
+            --input-bg: rgba(255,255,255,0.07);
+            --input-focus-color: #0badf8;
+            --input-shadow: rgba(26, 143, 180, 0.3);
+        }
+        
+        [data-theme="light"] {
+            --primary-color: #0badf8;
+            --primary-dark: #0892d0;
+            --text-color: #333;
+            --bg-color: #e0f7fa;
+            --form-bg: rgba(255,255,255,0.9);
+            --border-color: rgba(0,0,0,0.1);
+            --shadow-color: rgba(8,7,16,0.2);
+            --input-bg: rgba(0,0,0,0.05);
+            --input-focus-color: #0badf8;
+            --input-shadow: rgba(26, 143, 180, 0.3);
+        }
+        
+        *,
+        *:before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body{
+            background-color: var(--bg-color);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .background{
+            width: 430px;
+            height: 520px;
+            position: absolute;
+            transform: translate(-50%,-50%);
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+        }
+        
+        .background .shape{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            border-radius: 50%;
+        }
+        
+        .shape:first-child{
+            background: linear-gradient(
+                rgb(11, 173, 248),
+                #80deea
+            );
+            left: -80px;
+            top: -80px;
+        }
+        
+        .shape:last-child{
+            background: linear-gradient(
+                to right,
+                rgb(0, 138, 5),
+                rgb(2, 236, 92)
+            );
+            right: -30px;
+            bottom: -80px;
+        }
+        
+        .login-form{
+            height: 700px;
+            width: 400px;
+            background-color: var(--form-bg);
+            position: absolute;
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            border-radius: 5px;
+            backdrop-filter: blur(10px);
+            border: 2px solid var(--border-color);
+            box-shadow: 0 0 40px var(--shadow-color);
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .login-form *{
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            outline: none;
+            border: none;
+        }
+        
+        .logo-center {
+            display: block;
+            margin: 0 auto 25px auto;
+            width: 192px;
+            height: 190px;
+            object-fit: contain;
+            object-position: center;
+            border-radius: 50%;
+            border: 10px solid rgba(31, 161, 48, 0.59);
+            padding: 10px;
+            background-color: rgba(14, 164, 223, 0.34);
+            box-shadow: 0 0 20px rgba(19, 187, 230, 0.94);
+        }
+        
+        .login-form h3{
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #00bcd4;
+            text-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+        }
+        
+        .login-form label{
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            color: var(--text-color);
+        }
+        
+        .login-form input{
+            display: block;
+            height: 50px;
+            width: 100%;
+            background-color: var(--input-bg);
+            border-radius: 5px;
+            padding: 0 15px;
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 300;
+            color: var(--text-color);
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .login-form input:focus {
+            background-color: var(--input-bg);
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 8px var(--input-shadow);
+            outline: none;
+        }
+        
+        .login-form input::placeholder{
+            color: rgba(255, 255, 255, 0.4);
+        }
+        
+        .login-form button{
+            margin-top: 40px;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .login-form button:hover {
+            background-color: var(--primary-dark);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .login-form .remember-me {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+        
+        .login-form .remember-me input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 3px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .login-form .remember-me label {
+            margin-top: 0;
+            font-size: 15px;
+            color: var(--text-color);
+        }
+        
+        .login-form .forgot-password {
+            text-align: right;
+            margin-top: 15px;
+        }
+        
+        .login-form .forgot-password a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .login-form .forgot-password a:hover {
+            color: var(--primary-dark);
+            text-shadow: 0 0 5px var(--input-shadow);
+        }
+        
+        .form-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .form-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px 0;
+        }
+        
+        .login-form .footer-text {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .login-form .footer-text p {
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+        
+        .login-form .footer-text p:last-child {
+            font-size: 12px;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+        
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba(220, 53, 69, 0.3);
+            color: #fff;
+        }
+        
+        /* Language and Theme Toggle Styles */
+        .toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .language-toggle {
+            background-color: var(--form-bg);
+            border-radius: 4px;
+            padding: 5px 10px;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .language-toggle a {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 3px 8px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+        }
+        
+        .language-toggle a:hover {
+            background-color: rgba(11, 173, 248, 0.1);
+        }
+        
+        .language-toggle i {
+            margin-right: 5px;
+            color: var(--primary-color);
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle-wrapper {
+            display: flex;
+            align-items: center;
+        }
+        
+        .theme-toggle {
+            --toggle-size: 30px;
+            --toggle-padding: 3px;
+            --toggle-width: calc(var(--toggle-size) * 2.5);
+            --toggle-height: var(--toggle-size);
+            --toggle-bg: var(--form-bg);
+            --toggle-color: var(--text-color);
+            
+            background: var(--toggle-bg);
+            border: 1px solid var(--border-color);
+            border-radius: calc(var(--toggle-height) / 2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--toggle-padding);
+            position: relative;
+            width: var(--toggle-width);
+            height: var(--toggle-height);
+            box-shadow: 0 2px 5px var(--shadow-color);
+        }
+        
+        .theme-toggle:focus {
+            outline: 2px solid var(--primary-color);
+        }
+        
+        .toggle__indicator {
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            height: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+            width: calc(var(--toggle-height) - (var(--toggle-padding) * 2));
+            left: var(--toggle-padding);
+            transition: transform 0.3s ease;
+        }
+        
+        .theme-toggle[aria-pressed="true"] .toggle__indicator {
+            transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
+        }
+        
+        .toggle__icon {
+            color: var(--toggle-color);
+            font-size: 14px;
+            position: absolute;
+            z-index: 2;
+        }
+        
+        .toggle__icon--sun {
+            right: 8px;
+        }
+        
+        .toggle__icon--moon {
+            left: 8px;
+        }
+        
+        /* Home button */
+        .home-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--border-color);
+        }
+        
+        .home-button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        /* Theme transition */
+        .theme-transition {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+    </style>
 </head>
 <body>
-    <div class="owl">
-        <div class="hand"></div>
-        <div class="hand hand-r"></div>
-        <div class="arms">
-            <div class="arm"></div>
-            <div class="arm arm-r"></div>
+    <div class="login-container">
+        <!-- Home Button -->
+        <button id="homeButton" class="home-button">
+            <i class="fas fa-home"></i> Go Home
+        </button>
+        
+        <!-- Language and Theme Toggle -->
+        <div class="toggle-container">
+            <div class="language-toggle">
+                <i class="fas fa-language"></i>
+                <a href="#" onclick="switchLanguage('en'); return false;">English</a> | 
+                <a href="#" onclick="switchLanguage('am'); return false;">አማርኛ</a>
+            </div>
+            <div class="theme-toggle-wrapper">
+                <button class="theme-toggle" aria-pressed="false" title="Toggle Dark Mode">
+                    <span class="toggle__icon toggle__icon--moon">
+                        <i class="fas fa-moon"></i>
+                    </span>
+                    <span class="toggle__indicator"></span>
+                    <span class="toggle__icon toggle__icon--sun">
+                        <i class="fas fa-sun"></i>
+                    </span>
+                </button>
+            </div>
         </div>
-    </div>
-    <div class="form">
-        <div class="control">
-            <label for="email" class="fa fa-envelope"></label>
-            <input id="email" placeholder="Email" type="email">
+        
+        <div class="background">
+            <div class="shape"></div>
+            <div class="shape"></div>
         </div>
-        <div class="control">
-            <label for="password" class="fa fa-asterisk"></label>
-            <input id="password" placeholder="Password" type="password">
-        </div>
-        <form id="login-form" action="" method="post" style="width: 100%;">
-            <button type="submit" class="submit-btn">Login to LCMS</button>
+        
+        <form id="login-form" class="login-form" method="POST" action="#">
+            <div class="form-header">
+                <img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/logo.png" class="logo-center" onerror="this.src='https://via.placeholder.com/192x190?text=LCMS'">
+                
+                <h3>Login Here</h3>
+                
+                <div id="alert-box" class="alert" style="display: none;">
+                    Please enter valid credentials
+                </div>
+            </div>
+            
+            <div class="form-content">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required autofocus>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                
+                <div class="form-actions">
+                    <div class="forgot-password">
+                        <a href="#" onclick="forgotPassword(); return false;">Forgot Password?</a>
+                    </div>
+                </div>
+                
+                <button type="submit">Log In</button>
+            </div>
+            
+            <div class="footer-text">
+                <p>Legal Case Management System</p>
+                <p>©2025 All Rights Reserved</p>
+            </div>
         </form>
-        <div class="info-text" style="margin-top: 15px; font-size: 12px; text-align: center;">
-            <p>Enter your credentials to access the Legal Case Management System.</p>
-            <p><a href="https://github.com/firaghost/LCMS" style="color: #1a8fb4; text-decoration: none;">View on GitHub</a></p>
-        </div>
-        <script>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            // Theme toggle functionality
+            const TOGGLE_BUTTON = document.querySelector(".theme-toggle");
+            const THEME_KEY = 'lcms-theme-preference';
+            const HTML = document.documentElement;
+            
+            // Function to set theme
+            function setTheme(isDark) {
+                // Update toggle button state
+                TOGGLE_BUTTON.setAttribute("aria-pressed", isDark);
+                
+                // Update document theme
+                HTML.setAttribute("data-theme", isDark ? "dark" : "light");
+                
+                // Add transition class for smooth theme change
+                document.body.classList.add('theme-transition');
+                
+                // Store preference
+                localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+                
+                // Remove transition class after animation completes
+                setTimeout(() => {
+                    document.body.classList.remove('theme-transition');
+                }, 500);
+            }
+            
+            // Initialize theme based on stored preference
+            function initializeTheme() {
+                const storedTheme = localStorage.getItem(THEME_KEY);
+                if (storedTheme) {
+                    setTheme(storedTheme === "dark");
+                } else {
+                    // Default to light theme
+                    setTheme(false);
+                }
+            }
+            
+            // Initialize theme
+            initializeTheme();
+            
+            // Toggle theme when button is clicked
+            TOGGLE_BUTTON.addEventListener("click", function() {
+                const isCurrentlyDark = TOGGLE_BUTTON.getAttribute("aria-pressed") === "true";
+                setTheme(!isCurrentlyDark);
+            });
+            
+            // Home button functionality
+            document.getElementById('homeButton').addEventListener('click', function() {
+                window.location.href = 'https://github.com/firaghost/LCMS';
+            });
+            
+            // Login form submission
             document.getElementById('login-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 var email = document.getElementById('email').value;
                 var password = document.getElementById('password').value;
                 
                 if(email && password) {
-                    // Redirect to the LCMS login page
-                    // You can replace this with your actual hosted LCMS URL when available
-                    alert('In a real implementation, this would connect to your LCMS application.');
-                    
                     // For demonstration purposes, we'll show a success message
                     // In production, this would redirect to your actual LCMS application
-                    document.querySelector('.form').innerHTML = `
+                    document.querySelector('.login-form').innerHTML = `
                         <div style="text-align: center; padding: 20px;">
-                            <h3 style="color: #1a8fb4; margin-bottom: 15px;">Login Successful!</h3>
+                            <h3 style="color: var(--primary-color); margin-bottom: 15px;">Login Successful!</h3>
                             <p>This is a demonstration of the Legal Case Management System login page.</p>
                             <p>In the actual implementation, you would be redirected to the LCMS dashboard.</p>
                             <p style="margin-top: 20px;">
-                                <a href="https://github.com/firaghost/LCMS" style="color: #1a8fb4; text-decoration: none;">
+                                <a href="https://github.com/firaghost/LCMS" style="color: var(--primary-color); text-decoration: none;">
                                     View the LCMS project on GitHub
                                 </a>
                             </p>
                         </div>
                     `;
                 } else {
-                    alert('Please enter both email and password');
+                    document.getElementById('alert-box').style.display = 'block';
                 }
             });
-        </script>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+        });
+        
+        // Language switch function (demo)
+        function switchLanguage(lang) {
+            alert('Language switching would be implemented in the actual application. Selected: ' + lang);
+        }
+        
+        // Forgot password function (demo)
+        function forgotPassword() {
+            alert('Password reset functionality would be implemented in the actual application.');
+        }
+    </script>
 </body>
 </html>
