@@ -556,20 +556,25 @@
                 var password = document.getElementById('password').value;
                 
                 if(email && password) {
-                    // For demonstration purposes, we'll show a success message
-                    // In production, this would redirect to your actual LCMS application
+                    // Show loading indicator
                     document.querySelector('.login-form').innerHTML = `
                         <div style="text-align: center; padding: 20px;">
-                            <h3 style="color: var(--primary-color); margin-bottom: 15px;">Login Successful!</h3>
-                            <p>This is a demonstration of the Legal Case Management System login page.</p>
-                            <p>In the actual implementation, you would be redirected to the LCMS dashboard.</p>
-                            <p style="margin-top: 20px;">
-                                <a href="https://github.com/firaghost/LCMS" style="color: var(--primary-color); text-decoration: none;">
-                                    View the LCMS project on GitHub
-                                </a>
-                            </p>
+                            <h3 style="color: var(--primary-color); margin-bottom: 15px;">Logging in...</h3>
+                            <div class="loader" style="margin: 20px auto; border: 5px solid #f3f3f3; border-radius: 50%; border-top: 5px solid var(--primary-color); width: 50px; height: 50px; animation: spin 1s linear infinite;"></div>
                         </div>
+                        <style>
+                            @keyframes spin {
+                                0% { transform: rotate(0deg); }
+                                100% { transform: rotate(360deg); }
+                            }
+                        </style>
                     `;
+                    
+                    // Simulate loading time
+                    setTimeout(function() {
+                        // Redirect to dashboard demo
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
                 } else {
                     document.getElementById('alert-box').style.display = 'block';
                 }
