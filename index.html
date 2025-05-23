@@ -26,12 +26,43 @@
             <label for="password" class="fa fa-asterisk"></label>
             <input id="password" placeholder="Password" type="password">
         </div>
-        <button type="submit" class="submit-btn">Login</button>
+        <form id="login-form" action="" method="post" style="width: 100%;">
+            <button type="submit" class="submit-btn">Login to LCMS</button>
+        </form>
         <div class="info-text" style="margin-top: 15px; font-size: 12px; text-align: center;">
-            <p>This is a demo login page for the Legal Case Management System.</p>
-            <p>The actual system requires proper authentication.</p>
+            <p>Enter your credentials to access the Legal Case Management System.</p>
             <p><a href="https://github.com/firaghost/LCMS" style="color: #1a8fb4; text-decoration: none;">View on GitHub</a></p>
         </div>
+        <script>
+            document.getElementById('login-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+                
+                if(email && password) {
+                    // Redirect to the LCMS login page
+                    // You can replace this with your actual hosted LCMS URL when available
+                    alert('In a real implementation, this would connect to your LCMS application.');
+                    
+                    // For demonstration purposes, we'll show a success message
+                    // In production, this would redirect to your actual LCMS application
+                    document.querySelector('.form').innerHTML = `
+                        <div style="text-align: center; padding: 20px;">
+                            <h3 style="color: #1a8fb4; margin-bottom: 15px;">Login Successful!</h3>
+                            <p>This is a demonstration of the Legal Case Management System login page.</p>
+                            <p>In the actual implementation, you would be redirected to the LCMS dashboard.</p>
+                            <p style="margin-top: 20px;">
+                                <a href="https://github.com/firaghost/LCMS" style="color: #1a8fb4; text-decoration: none;">
+                                    View the LCMS project on GitHub
+                                </a>
+                            </p>
+                        </div>
+                    `;
+                } else {
+                    alert('Please enter both email and password');
+                }
+            });
+        </script>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
