@@ -1,6 +1,5 @@
-/* Original styles preserved for compatibility */
 body {
-    background: linear-gradient(135deg, #1a8fb4 0%, #0c5a73 100%);
+    background-color: #1a8fb4;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     display: flex;

@@ -1,25 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Legal Case Management System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            text-align: center;
-            padding: 50px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #1a8fb4;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Legal Case Management System</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Legal Case Management System</h1>
-    <p>Welcome to the Legal Case Management System - a comprehensive solution for managing legal cases.</p>
-    <p>This is a simple test page for GitHub Pages.</p>
+    <div class="owl">
+        <div class="hand"></div>
+        <div class="hand hand-r"></div>
+        <div class="arms">
+            <div class="arm"></div>
+            <div class="arm arm-r"></div>
+        </div>
+    </div>
+    <div class="form">
+        <div class="control">
+            <label for="email" class="fa fa-envelope"></label>
+            <input id="email" placeholder="Email" type="email">
+        </div>
+        <div class="control">
+            <label for="password" class="fa fa-asterisk"></label>
+            <input id="password" placeholder="Password" type="password">
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+        <div class="info-text" style="margin-top: 15px; font-size: 12px; text-align: center;">
+            <p>This is a demo login page for the Legal Case Management System.</p>
+            <p>The actual system requires proper authentication.</p>
+            <p><a href="https://github.com/firaghost/LCMS" style="color: #1a8fb4; text-decoration: none;">View on GitHub</a></p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
