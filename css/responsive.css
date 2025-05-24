@@ -1,0 +1,400 @@
+/**
+ * Responsive styles for Legal Case Management System Dashboard
+ */
+
+/* Base responsive settings */
+html, body {
+    overflow-x: hidden;
+}
+
+/* Large Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+        max-width: 1400px;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 25px;
+    }
+}
+
+/* Desktops and Laptops (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+    }
+    
+    .dashboard-stats .stat-value {
+        font-size: 24px;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 20px;
+    }
+    
+    .task-title, .notification-title {
+        font-size: 13px;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .nav-md .container.body .right_col {
+        padding: 15px;
+    }
+    
+    .top_nav {
+        margin-left: 200px;
+    }
+    
+    .left_col {
+        width: 200px;
+    }
+    
+    .main_container .top_nav {
+        margin-left: 200px;
+    }
+    
+    .dashboard-stats .stat-card {
+        padding: 15px;
+    }
+    
+    .dashboard-stats .stat-value {
+        font-size: 22px;
+    }
+    
+    .dashboard-stats .stat-label {
+        font-size: 12px;
+    }
+    
+    .task-meta, .notification-text {
+        font-size: 11px;
+    }
+    
+    .dashboard-card .card-header h3 {
+        font-size: 16px;
+    }
+    
+    .calendar-title, .court-title {
+        font-size: 15px;
+    }
+    
+    .task-title, .notification-title {
+        font-size: 12px;
+    }
+    
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Small Tablets and Large Phones (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .nav-md .container.body .right_col {
+        padding: 10px;
+    }
+    
+    .top_nav {
+        margin-left: 0;
+    }
+    
+    .left_col {
+        width: 60px;
+        z-index: 1000;
+    }
+    
+    .main_container .top_nav {
+        margin-left: 60px;
+    }
+    
+    .nav-md .container.body .col-md-3.left_col.menu_fixed {
+        width: 60px;
+    }
+    
+    .nav-md .container.body .col-md-3.left_col {
+        width: 60px;
+        padding: 0;
+    }
+    
+    .nav-md .container.body .right_col {
+        margin-left: 60px;
+    }
+    
+    .nav-sm .container.body .right_col {
+        margin-left: 60px;
+    }
+    
+    .dashboard-stats .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 20px;
+    }
+    
+    .calendar-section, .court-section {
+        overflow-x: auto;
+    }
+    
+    .dashboard-header h1 {
+        font-size: 24px;
+    }
+    
+    .dashboard-subheader {
+        font-size: 14px;
+    }
+    
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* Collapse sidebar text */
+    .nav-md span.fa,
+    .nav-md .menu_section h3,
+    .nav-md .profile_info {
+        display: none;
+    }
+    
+    .nav-md ul.nav.child_menu {
+        left: 60px;
+    }
+    
+    .nav-md li.active ul.nav.child_menu {
+        display: none;
+    }
+    
+    .nav-md ul.nav.child_menu li {
+        padding-left: 0;
+    }
+    
+    .nav-md .sidebar-section {
+        display: none;
+    }
+    
+    .nav-md .nav.side-menu li a {
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+    
+    .nav-md .nav.side-menu li a i {
+        font-size: 18px;
+        margin-right: 0;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+/* Phones (575px and below) */
+@media (max-width: 575px) {
+    .nav-md .container.body .right_col {
+        padding: 10px;
+    }
+    
+    .top_nav {
+        margin-left: 0;
+    }
+    
+    .left_col {
+        width: 60px;
+        z-index: 1000;
+    }
+    
+    .main_container .top_nav {
+        margin-left: 60px;
+    }
+    
+    .nav-md .container.body .col-md-3.left_col.menu_fixed {
+        width: 60px;
+    }
+    
+    .nav-md .container.body .col-md-3.left_col {
+        width: 60px;
+        padding: 0;
+    }
+    
+    .nav-md .container.body .right_col {
+        margin-left: 60px;
+    }
+    
+    .nav-sm .container.body .right_col {
+        margin-left: 60px;
+    }
+    
+    .dashboard-stats .row > div {
+        margin-bottom: 15px;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 15px;
+    }
+    
+    .calendar-section, .court-section {
+        overflow-x: auto;
+    }
+    
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+    
+    .dashboard-subheader {
+        font-size: 12px;
+    }
+    
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* Collapse sidebar text */
+    .nav-md span.fa,
+    .nav-md .menu_section h3,
+    .nav-md .profile_info {
+        display: none;
+    }
+    
+    .nav-md ul.nav.child_menu {
+        left: 60px;
+    }
+    
+    .nav-md li.active ul.nav.child_menu {
+        display: none;
+    }
+    
+    .nav-md ul.nav.child_menu li {
+        padding-left: 0;
+    }
+    
+    .nav-md .sidebar-section {
+        display: none;
+    }
+    
+    .nav-md .nav.side-menu li a {
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 0;
+    }
+    
+    .nav-md .nav.side-menu li a i {
+        font-size: 18px;
+        margin-right: 0;
+        display: block;
+        margin-bottom: 0;
+    }
+    
+    /* Adjust card layout for mobile */
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12,
+    .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+    .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+    .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    /* Make tables responsive */
+    .table-responsive {
+        border: none;
+        margin-bottom: 0;
+    }
+    
+    /* Adjust floating action button position */
+    .floating-action-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 48px;
+        height: 48px;
+    }
+    
+    /* Adjust notification dropdown for mobile */
+    .dropdown-menu.msg_list {
+        width: 280px;
+    }
+    
+    /* Fix navbar items spacing */
+    .nav.navbar-nav > li > a {
+        padding: 0 10px;
+    }
+}
+
+/* Fix for sidebar toggle on mobile */
+@media (max-width: 991px) {
+    .nav-md .container.body .col-md-3.left_col.menu_fixed {
+        position: fixed;
+        height: 100%;
+    }
+    
+    .menu_toggle i:before {
+        content: "\f0c9";
+    }
+    
+    .nav-md.nav-sm .container.body .col-md-3.left_col {
+        width: 230px;
+        z-index: 1000;
+    }
+    
+    .nav-md.nav-sm .container.body .right_col {
+        margin-left: 230px;
+    }
+    
+    .nav-md.nav-sm .main_container .top_nav {
+        margin-left: 230px;
+    }
+    
+    .nav-md.nav-sm span.fa,
+    .nav-md.nav-sm .menu_section h3,
+    .nav-md.nav-sm .profile_info {
+        display: block;
+    }
+    
+    .nav-md.nav-sm .nav.side-menu li a {
+        text-align: left;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .nav-md.nav-sm .nav.side-menu li a i {
+        font-size: 14px;
+        margin-right: 5px;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    
+    .nav-md.nav-sm .sidebar-section {
+        display: block;
+    }
+    
+    .nav-md.nav-sm .menu_toggle i:before {
+        content: "\f00d";
+    }
+    
+    /* Add overlay when sidebar is expanded on mobile */
+    .nav-md.nav-sm:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+}
+
+/* Fix for row layout on smaller screens */
+@media (max-width: 991px) {
+    .row > [class*="col-"] {
+        margin-bottom: 15px;
+    }
+    
+    .row > [class*="col-"]:last-child {
+        margin-bottom: 0;
+    }
+}

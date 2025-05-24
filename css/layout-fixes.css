@@ -1,0 +1,237 @@
+/**
+ * Layout fixes for Legal Case Management System Dashboard
+ * Addresses specific layout issues and ensures proper display on all devices
+ */
+
+/* Fix container and body layout */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+.container.body {
+    min-height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Fix sidebar layout */
+.left_col {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 230px;
+    z-index: 999;
+    transition: width 0.3s ease;
+}
+
+.nav-md .container.body .col-md-3.left_col {
+    width: 230px;
+    padding: 0;
+}
+
+.nav-md .container.body .col-md-3.left_col.menu_fixed {
+    position: fixed;
+    height: 100%;
+}
+
+/* Fix main content area */
+.right_col {
+    position: relative;
+    margin-left: 230px;
+    min-height: calc(100vh - 57px);
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Fix top navigation */
+.top_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 230px;
+    height: 57px;
+    z-index: 998;
+    background: #2A3F54;
+    transition: left 0.3s ease;
+}
+
+.nav_menu {
+    height: 100%;
+    background: #2A3F54;
+}
+
+/* Fix dashboard cards */
+.dashboard-card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.dashboard-card .card-header {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dashboard-card .card-body {
+    padding: 15px;
+}
+
+/* Fix row and column layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Fix tables */
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+    margin-bottom: 0;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+}
+
+.table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+    padding: 8px;
+    line-height: 1.42857143;
+}
+
+.table > tbody > tr > td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+/* Fix footer */
+footer {
+    background: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .dashboard-card {
+    background: #2c2c3a;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .dashboard-card .card-header {
+    border-bottom-color: #3a3a4a;
+}
+
+[data-theme="dark"] footer {
+    background: #2c2c3a;
+    border-top-color: #3a3a4a;
+}
+
+/* Fix for sidebar toggle button */
+.nav_menu .toggle {
+    float: left;
+    margin: 0;
+    padding-top: 16px;
+    width: 70px;
+}
+
+.nav_menu .toggle a {
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Fix for collapsed sidebar (mobile view) */
+.nav-sm .container.body .col-md-3.left_col {
+    width: 70px;
+}
+
+.nav-sm .container.body .right_col {
+    margin-left: 70px;
+}
+
+.nav-sm .main_container .top_nav {
+    margin-left: 70px;
+    left: 70px;
+}
+
+/* Sidebar overlay for mobile */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .sidebar-overlay {
+        display: block;
+    }
+}
+
+/* Fix for nested rows */
+.row .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Fix for tables on mobile */
+@media (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+    
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+    
+    .table-responsive > .table > thead > tr > th,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+}
