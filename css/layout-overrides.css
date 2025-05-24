@@ -1,0 +1,552 @@
+/**
+ * Layout Overrides for Legal Case Management System Dashboard
+ * Comprehensive fixes for layout and header issues
+ */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+
+/* Container and main layout */
+.container.body {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    display: flex;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Sidebar fixes */
+.left_col {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px !important;
+    z-index: 999;
+    background: #2A3F54;
+    transition: width 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+}
+
+.nav-md .container.body .col-md-3.left_col {
+    width: 280px !important;
+    padding: 0;
+}
+
+.nav-md .container.body .col-md-3.left_col.menu_fixed {
+    position: fixed;
+    height: 100%;
+}
+
+/* Main content area fixes */
+.right_col {
+    position: relative;
+    margin-left: 280px !important;
+    min-height: calc(100vh - 60px);
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+    background-color: #f7f7f7;
+}
+
+/* Top navigation fixes */
+.top_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 280px !important;
+    height: 60px !important;
+    z-index: 998;
+    background: #2A3F54 !important;
+    transition: left 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav_menu {
+    height: 100%;
+    background: #2A3F54 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.nav_menu .navbar {
+    background: transparent !important;
+    border: none !important;
+    margin: 0;
+    min-height: 60px !important;
+}
+
+.navbar-default {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.container-fluid {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+/* Toggle button fixes */
+.nav.toggle {
+    margin: 0;
+    padding: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.nav.toggle a {
+    color: #ffffff !important;
+    font-size: 20px;
+    padding: 0 15px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav.toggle a i {
+    font-size: 20px;
+    color: #ffffff !important;
+}
+
+/* Navbar items fixes */
+.navbar-nav {
+    margin: 0;
+    height: 60px;
+}
+
+.navbar-nav > li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav > li > a {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #ffffff !important;
+    padding: 0 15px;
+}
+
+.navbar-right {
+    margin: 0 0 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* User profile dropdown fixes */
+.user-profile {
+    display: flex !important;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px !important;
+    color: #ffffff !important;
+}
+
+.user-profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-profile .fa-angle-down {
+    margin-left: 5px;
+    color: #ffffff !important;
+}
+
+/* Dropdown menu fixes */
+.dropdown-menu {
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+.dropdown-menu > li > a {
+    padding: 8px 20px;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu > li > a i {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #2A3F54;
+    width: 16px;
+    text-align: center;
+}
+
+.dropdown-menu > li > a i.pull-right {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+/* Notification icon and badge fixes */
+.info-number {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px !important;
+    color: #ffffff !important;
+}
+
+.info-number i {
+    font-size: 18px;
+    color: #ffffff !important;
+}
+
+.info-number .badge {
+    position: absolute;
+    top: 12px;
+    right: 7px;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 13px;
+    padding: 2px 6px;
+    background-color: #26B99A !important;
+    border-radius: 10px;
+}
+
+/* Message dropdown fixes */
+.msg_list {
+    width: 300px;
+    padding: 0;
+}
+
+.msg_list li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.msg_list li:last-child {
+    border-bottom: none;
+}
+
+.msg_list li a {
+    padding: 10px 15px !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    color: #5A738E !important;
+}
+
+.msg_list li a:hover {
+    background-color: #f9f9f9;
+}
+
+.msg_list .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.msg_list .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.msg_list .message {
+    flex: 1;
+}
+
+.msg_list .message h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.msg_list .message p {
+    font-size: 12px;
+    margin: 0 0 5px 0;
+    color: #777;
+}
+
+.msg_list .message .time {
+    font-size: 11px;
+    color: #aaa;
+    display: block;
+}
+
+/* Theme toggle button fixes */
+.theme-toggle {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: #ffffff !important;
+    font-size: 18px;
+}
+
+.theme-toggle i {
+    color: #ffffff !important;
+}
+
+/* Dashboard content fixes */
+.dashboard-header {
+    margin-bottom: 20px;
+    padding-top: 70px !important;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+    color: #2A3F54;
+}
+
+.dashboard-subtitle {
+    font-size: 14px;
+    color: #73879C;
+    margin: 0;
+}
+
+/* Dashboard card fixes */
+.dashboard-card {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.dashboard-card .card-header {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.dashboard-card .card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2A3F54;
+}
+
+.dashboard-card .card-body {
+    padding: 15px;
+}
+
+/* Dashboard stats fixes */
+.dashboard-stats .stat-card {
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-stats .stat-icon {
+    font-size: 36px;
+    margin-right: 15px;
+    color: #26B99A;
+}
+
+.dashboard-stats .stat-value {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #2A3F54;
+}
+
+.dashboard-stats .stat-label {
+    font-size: 12px;
+    color: #73879C;
+    text-transform: uppercase;
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .right_col {
+    background-color: #2c2c3a;
+}
+
+[data-theme="dark"] .dashboard-card {
+    background: #2c2c3a;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .dashboard-card .card-header {
+    background-color: #3a3a4a;
+    border-bottom-color: #3a3a4a;
+}
+
+[data-theme="dark"] .dashboard-card .card-header h3 {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .dashboard-stats .stat-card {
+    background: #2c2c3a;
+}
+
+[data-theme="dark"] .dashboard-stats .stat-value {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .dashboard-title {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: #2c2c3a;
+    border-color: #3a3a4a;
+}
+
+[data-theme="dark"] .dropdown-menu > li > a {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .dropdown-menu > li > a:hover {
+    background-color: #3a3a4a;
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 991px) {
+    .left_col {
+        width: 60px !important;
+    }
+    
+    .nav-md .container.body .col-md-3.left_col {
+        width: 60px !important;
+    }
+    
+    .right_col {
+        margin-left: 60px !important;
+    }
+    
+    .top_nav {
+        left: 60px !important;
+    }
+    
+    .nav-md .nav.side-menu li a {
+        text-align: center;
+        padding: 10px 5px;
+        font-size: 10px;
+    }
+    
+    .nav-md .nav.side-menu li a i {
+        font-size: 18px;
+        margin-right: 0;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .nav-md .sidebar-section {
+        display: none;
+    }
+    
+    .nav-md span.fa,
+    .nav-md .menu_section h3,
+    .nav-md .profile_info {
+        display: none;
+    }
+    
+    .nav-md.nav-sm .container.body .col-md-3.left_col {
+        width: 280px !important;
+    }
+    
+    .nav-md.nav-sm .container.body .right_col {
+        margin-left: 280px !important;
+    }
+    
+    .nav-md.nav-sm .main_container .top_nav {
+        margin-left: 280px !important;
+        left: 280px !important;
+    }
+    
+    .nav-md.nav-sm span.fa,
+    .nav-md.nav-sm .menu_section h3,
+    .nav-md.nav-sm .profile_info {
+        display: block;
+    }
+    
+    .nav-md.nav-sm .nav.side-menu li a {
+        text-align: left;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .nav-md.nav-sm .nav.side-menu li a i {
+        font-size: 14px;
+        margin-right: 5px;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    
+    .nav-md.nav-sm .sidebar-section {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .dashboard-header {
+        padding-top: 80px !important;
+    }
+    
+    .dashboard-title {
+        font-size: 20px;
+    }
+    
+    .dashboard-subtitle {
+        font-size: 12px;
+    }
+    
+    .dashboard-stats .stat-card {
+        margin-bottom: 15px;
+    }
+    
+    .dashboard-card .card-header {
+        padding: 10px;
+    }
+    
+    .dashboard-card .card-body {
+        padding: 10px;
+    }
+    
+    .user-profile span {
+        display: none;
+    }
+    
+    .navbar-nav > li > a {
+        padding: 0 10px;
+    }
+}
