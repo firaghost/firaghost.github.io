@@ -68,6 +68,10 @@
     <link href="css/responsive.css" rel="stylesheet">
     <!-- Layout Fixes -->
     <link href="css/layout-fixes.css" rel="stylesheet">
+    <!-- Dashboard Sizing -->
+    <link href="css/dashboard-sizing.css" rel="stylesheet">
+    <!-- Header Fixes -->
+    <link href="css/header-fixes.css" rel="stylesheet">
     <!-- FullCalendar -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.5/fullcalendar.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.5/fullcalendar.print.min.css" rel="stylesheet" media="print">
@@ -1840,15 +1844,16 @@
             <!-- top navigation -->
             <div class="top_nav">
                 <div class="nav_menu">
-                    <nav>
-                        <div class="nav toggle">
-                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                        </div>
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
 
-                        <ul class="nav navbar-nav navbar-right">
+                            <ul class="nav navbar-nav navbar-right">
                             <li class="">
                                 <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="">Admin User
+                                    <img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="">Haile Selassie
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -1867,42 +1872,42 @@
                                 <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                                     <li>
                                         <a>
-                                            <span class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></span>
-                                            <span>
-                                                <span>John Smith</span>
+                                            <div class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></div>
+                                            <div class="message">
+                                                <h4>Abebe Bekele</h4>
+                                                <p>Case update for Bekele vs. Addis Ababa City Council...</p>
                                                 <span class="time">3 mins ago</span>
-                                            </span>
-                                            <span class="message">Case update for Smith vs. City Council...</span>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a>
-                                            <span class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></span>
-                                            <span>
-                                                <span>Sarah Johnson</span>
+                                            <div class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></div>
+                                            <div class="message">
+                                                <h4>Tigist Haile</h4>
+                                                <p>New document uploaded for Ethiopian Tech Solutions case...</p>
                                                 <span class="time">10 mins ago</span>
-                                            </span>
-                                            <span class="message">New document uploaded for Tech Solutions case...</span>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a>
-                                            <span class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></span>
-                                            <span>
-                                                <span>System</span>
+                                            <div class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></div>
+                                            <div class="message">
+                                                <h4>System</h4>
+                                                <p>Hearing reminder: Wondwossen case tomorrow at 10:00 AM</p>
                                                 <span class="time">1 hour ago</span>
-                                            </span>
-                                            <span class="message">Hearing reminder: Williams case tomorrow at 10:00 AM</span>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
                                         <a>
-                                            <span class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></span>
-                                            <span>
-                                                <span>Michael Brown</span>
+                                            <div class="image"><img src="https://raw.githubusercontent.com/firaghost/LCMS/main/public/upload/user-icon-placeholder.png" alt="Profile Image" /></div>
+                                            <div class="message">
+                                                <h4>Dawit Mengistu</h4>
+                                                <p>Please review the updated case notes...</p>
                                                 <span class="time">3 hours ago</span>
-                                            </span>
-                                            <span class="message">Please review the updated case notes...</span>
+                                            </div>
                                         </a>
                                     </li>
                                     <li>
@@ -1921,6 +1926,7 @@
                                 </a>
                             </li>
                         </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -1931,8 +1937,8 @@
                 <div class="dashboard-header">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="dashboard-title">Dashboard</h1>
-                            <p class="dashboard-subtitle">Welcome back, Admin User</p>
+                            <h1 class="dashboard-title">Ethiopian Legal Case Dashboard</h1>
+                            <p class="dashboard-subtitle">Welcome back, Haile Selassie</p>
                         </div>
                     </div>
                 </div>
@@ -2039,26 +2045,26 @@
                                             <tbody>
                                                 <tr>
                                                     <td>2025-05-24</td>
-                                                    <td>Smith Enterprises Acquisition</td>
-                                                    <td>Federal Court - Judge Thompson</td>
+                                                    <td>Bekele Enterprises Acquisition</td>
+                                                    <td>Federal Court - Judge Tadesse</td>
                                                     <td>10:00 AM</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2025-05-26</td>
-                                                    <td>Williams Property Dispute</td>
-                                                    <td>District Court - Judge Martinez</td>
+                                                    <td>Wondwossen Property Dispute</td>
+                                                    <td>Addis Ababa District Court - Judge Alemayehu</td>
                                                     <td>2:30 PM</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2025-05-28</td>
-                                                    <td>Tech Solutions Patent Dispute</td>
-                                                    <td>Federal Court - Judge Thompson</td>
+                                                    <td>Ethiopian Tech Solutions Patent Dispute</td>
+                                                    <td>Federal Court - Judge Tadesse</td>
                                                     <td>9:15 AM</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2025-05-30</td>
-                                                    <td>State vs. Miller</td>
-                                                    <td>District Court - Judge Martinez</td>
+                                                    <td>Ethiopian State vs. Kebede</td>
+                                                    <td>Addis Ababa District Court - Judge Alemayehu</td>
                                                     <td>11:00 AM</td>
                                                 </tr>
                                             </tbody>
@@ -2084,7 +2090,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="court-section">
-                                    <h4 class="court-title">Federal Court - Judge Thompson</h4>
+                                    <h4 class="court-title">Federal Court - Judge Tadesse</h4>
                                     <div class="table-responsive">
                                         <table id="case_list" class="table table-hover">
                                             <thead>
@@ -2105,11 +2111,11 @@
                                                         <small class="case-type">Corporate</small>
                                                     </td>
                                                     <td>
-                                                        <div class="case-title">Smith Enterprises Acquisition</div>
+                                                        <div class="case-title">Bekele Enterprises Acquisition</div>
                                                         <div class="case-parties">
-                                                            <span class="petitioner">Smith Enterprises</span>
+                                                            <span class="petitioner">Bekele Enterprises</span>
                                                             <span class="vs">vs</span>
-                                                            <span class="respondent">Global Corp</span>
+                                                            <span class="respondent">Addis Global Corp</span>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -2140,11 +2146,11 @@
                                                         <small class="case-type">Civil</small>
                                                     </td>
                                                     <td>
-                                                        <div class="case-title">Williams Property Dispute</div>
+                                                        <div class="case-title">Wondwossen Property Dispute</div>
                                                         <div class="case-parties">
-                                                            <span class="petitioner">John Williams</span>
+                                                            <span class="petitioner">Yohannes Wondwossen</span>
                                                             <span class="vs">vs</span>
-                                                            <span class="respondent">City Council</span>
+                                                            <span class="respondent">Addis Ababa City Council</span>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -2173,7 +2179,7 @@
                                     </div>
                                 </div>
                                 <div class="court-section">
-                                    <h4 class="court-title">District Court - Judge Martinez</h4>
+                                    <h4 class="court-title">Addis Ababa District Court - Judge Alemayehu</h4>
                                     <div class="table-responsive">
                                         <table id="case_list_2" class="table table-hover">
                                             <thead>
@@ -2194,11 +2200,11 @@
                                                         <small class="case-type">Intellectual Property</small>
                                                     </td>
                                                     <td>
-                                                        <div class="case-title">Tech Solutions Patent Dispute</div>
+                                                        <div class="case-title">Ethiopian Tech Solutions Patent Dispute</div>
                                                         <div class="case-parties">
-                                                            <span class="petitioner">Tech Solutions Inc.</span>
+                                                            <span class="petitioner">Ethiopian Tech Solutions Ltd.</span>
                                                             <span class="vs">vs</span>
-                                                            <span class="respondent">Innovate Corp</span>
+                                                            <span class="respondent">Habesha Innovate Corp</span>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -2229,11 +2235,11 @@
                                                         <small class="case-type">Criminal</small>
                                                     </td>
                                                     <td>
-                                                        <div class="case-title">State vs. Miller</div>
+                                                        <div class="case-title">Ethiopian State vs. Kebede</div>
                                                         <div class="case-parties">
-                                                            <span class="petitioner">State</span>
+                                                            <span class="petitioner">Ethiopian State</span>
                                                             <span class="vs">vs</span>
-                                                            <span class="respondent">Robert Miller</span>
+                                                            <span class="respondent">Mekonnen Kebede</span>
                                                         </div>
                                                     </td>
                                                     <td>
@@ -2298,7 +2304,7 @@
                                             <label for="task1"></label>
                                         </div>
                                         <div class="task-content">
-                                            <h4 class="task-title">Prepare documents for Smith Enterprises case</h4>
+                                            <h4 class="task-title">Prepare documents for Bekele Enterprises case</h4>
                                             <div class="task-meta">
                                                 <span class="task-due"><i class="fa fa-calendar"></i> Due: May 23, 2025</span>
                                                 <span class="task-priority high-priority">High Priority</span>
@@ -2311,7 +2317,7 @@
                                             <label for="task2"></label>
                                         </div>
                                         <div class="task-content">
-                                            <h4 class="task-title">Review Williams Property case documents</h4>
+                                            <h4 class="task-title">Review Wondwossen Property case documents</h4>
                                             <div class="task-meta">
                                                 <span class="task-due"><i class="fa fa-calendar"></i> Due: May 25, 2025</span>
                                                 <span class="task-priority medium-priority">Medium Priority</span>
@@ -2324,7 +2330,7 @@
                                             <label for="task3"></label>
                                         </div>
                                         <div class="task-content">
-                                            <h4 class="task-title">File motion for Tech Solutions case</h4>
+                                            <h4 class="task-title">File motion for Ethiopian Tech Solutions case</h4>
                                             <div class="task-meta">
                                                 <span class="task-due"><i class="fa fa-calendar"></i> Due: May 27, 2025</span>
                                                 <span class="task-priority high-priority">High Priority</span>
@@ -2337,7 +2343,7 @@
                                             <label for="task4"></label>
                                         </div>
                                         <div class="task-content">
-                                            <h4 class="task-title">Schedule client meeting for State vs. Miller</h4>
+                                            <h4 class="task-title">Schedule client meeting for Ethiopian State vs. Kebede</h4>
                                             <div class="task-meta">
                                                 <span class="task-due"><i class="fa fa-calendar"></i> Due: May 29, 2025</span>
                                                 <span class="task-priority low-priority">Low Priority</span>

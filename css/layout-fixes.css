@@ -39,13 +39,13 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 230px;
+    width: 260px;
     z-index: 999;
     transition: width 0.3s ease;
 }
 
 .nav-md .container.body .col-md-3.left_col {
-    width: 230px;
+    width: 260px;
     padding: 0;
 }
 
@@ -57,7 +57,7 @@ body {
 /* Fix main content area */
 .right_col {
     position: relative;
-    margin-left: 230px;
+    margin-left: 260px;
     min-height: calc(100vh - 57px);
     padding: 20px;
     transition: margin-left 0.3s ease;
@@ -68,7 +68,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    left: 230px;
+    left: 260px;
     height: 57px;
     z-index: 998;
     background: #2A3F54;

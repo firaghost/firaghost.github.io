@@ -45,15 +45,20 @@ html, body {
     }
     
     .top_nav {
-        margin-left: 200px;
+        margin-left: 220px;
+        left: 220px;
     }
     
     .left_col {
-        width: 200px;
+        width: 220px;
     }
     
     .main_container .top_nav {
-        margin-left: 200px;
+        margin-left: 220px;
+    }
+    
+    .nav-md .container.body .right_col {
+        margin-left: 220px;
     }
     
     .dashboard-stats .stat-card {

@@ -79,13 +79,14 @@ body.nav-md .nav.side-menu > li > a:hover {
 }
 
 /* Badge styling */
-.badge {
-    background-color: #26B99A;
-    color: white;
-    padding: 3px 7px;
-    border-radius: 10px;
-    font-size: 11px;
-    margin-left: 5px;
+.badge.left_col {
+    background: #2A3F54;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
 }
 
 .side-menu .badge {

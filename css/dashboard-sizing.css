@@ -1,0 +1,176 @@
+/**
+ * Dashboard sizing adjustments for Legal Case Management System
+ * Reduces the size of dashboard elements to create a more compact layout
+ */
+
+/* Adjust dashboard card sizes */
+.dashboard-card {
+    margin-bottom: 15px;
+}
+
+.dashboard-card .card-header {
+    padding: 10px 15px;
+}
+
+.dashboard-card .card-body {
+    padding: 12px;
+}
+
+/* Make dashboard stats more compact */
+.dashboard-stats .stat-card {
+    padding: 15px;
+}
+
+.dashboard-stats .stat-icon {
+    font-size: 32px;
+    margin-right: 10px;
+}
+
+.dashboard-stats .stat-value {
+    font-size: 24px;
+    margin-bottom: 2px;
+}
+
+.dashboard-stats .stat-label {
+    font-size: 12px;
+}
+
+/* Adjust table cell padding */
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    padding: 8px 6px;
+}
+
+/* Make task and notification items more compact */
+.task-item,
+.notification-item {
+    padding: 8px 0;
+}
+
+.task-title,
+.notification-title {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.task-meta,
+.notification-text {
+    font-size: 12px;
+}
+
+/* Adjust calendar section */
+.calendar-section,
+.court-section {
+    margin-bottom: 15px;
+}
+
+.calendar-header,
+.court-section h4 {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+/* Adjust row spacing */
+.row {
+    margin-bottom: 15px;
+}
+
+/* Adjust dashboard header */
+.dashboard-header {
+    margin-bottom: 15px;
+}
+
+.dashboard-header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.dashboard-subheader {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Make action buttons smaller */
+.action-buttons .btn {
+    width: 28px;
+    height: 28px;
+}
+
+.action-buttons .btn i {
+    font-size: 12px;
+}
+
+/* Adjust card actions */
+.card-actions .btn {
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* Adjust date picker container */
+.date-picker-container {
+    max-width: 150px;
+}
+
+.date-picker-container input {
+    font-size: 12px;
+    height: 30px;
+    padding: 5px 8px;
+}
+
+/* Adjust case parties display */
+.case-parties {
+    font-size: 11px;
+}
+
+.case-title {
+    font-size: 13px;
+}
+
+.case-number {
+    font-size: 12px;
+}
+
+.case-type {
+    font-size: 10px;
+}
+
+/* Adjust status badges */
+.status-badge {
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+/* Make floating action button smaller */
+.floating-action-btn {
+    width: 48px;
+    height: 48px;
+}
+
+.floating-action-btn i {
+    font-size: 20px;
+}
+
+/* Adjust content padding */
+.right_col {
+    padding: 15px;
+}
+
+/* Make sidebar items more compact */
+.nav.side-menu > li > a {
+    padding: 8px 12px;
+}
+
+.nav.child_menu > li > a {
+    padding: 6px 15px;
+}
+
+/* Adjust dashboard cards for better fit */
+@media (min-width: 992px) {
+    .col-md-8 {
+        width: 65%;
+    }
+    
+    .col-md-4 {
+        width: 35%;
+    }
+}
