@@ -1,0 +1,249 @@
+/**
+ * Tasks and Notifications Styling for Legal Case Management System
+ */
+
+/* Task List Styling */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item:hover {
+    background-color: rgba(38, 185, 154, 0.05);
+}
+
+.task-checkbox {
+    flex: 0 0 30px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5px;
+}
+
+.task-check {
+    display: none;
+}
+
+.task-check + label {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #26B99A;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-check:checked + label:after {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: -2px;
+    left: 1px;
+    color: #26B99A;
+    font-size: 14px;
+}
+
+.task-content {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.task-title {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.task-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #777;
+}
+
+.task-due {
+    display: inline-block;
+}
+
+.task-due i {
+    margin-right: 3px;
+}
+
+.task-priority {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.high-priority {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: #e74c3c;
+}
+
+.medium-priority {
+    background-color: rgba(243, 156, 18, 0.1);
+    color: #f39c12;
+}
+
+.low-priority {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db;
+}
+
+/* Notification List Styling */
+.notification-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: rgba(38, 185, 154, 0.05);
+}
+
+.notification-item.unread {
+    background-color: rgba(38, 185, 154, 0.05);
+}
+
+.notification-item.unread .notification-title:after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #26B99A;
+    border-radius: 50%;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.notification-icon {
+    flex: 0 0 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.bg-info {
+    background-color: #3498db;
+}
+
+.bg-success {
+    background-color: #26B99A;
+}
+
+.bg-warning {
+    background-color: #f39c12;
+}
+
+.bg-danger {
+    background-color: #e74c3c;
+}
+
+.notification-content {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.notification-title {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.notification-text {
+    margin: 0 0 5px 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.notification-time {
+    display: block;
+    font-size: 11px;
+    color: #999;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .task-item {
+    border-bottom-color: #393950;
+}
+
+[data-theme="dark"] .task-item:hover {
+    background-color: rgba(38, 185, 154, 0.1);
+}
+
+[data-theme="dark"] .task-title {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .task-meta {
+    color: #aaa;
+}
+
+[data-theme="dark"] .notification-item {
+    border-bottom-color: #393950;
+}
+
+[data-theme="dark"] .notification-item:hover {
+    background-color: rgba(38, 185, 154, 0.1);
+}
+
+[data-theme="dark"] .notification-item.unread {
+    background-color: rgba(38, 185, 154, 0.1);
+}
+
+[data-theme="dark"] .notification-title {
+    color: #e4e4e4;
+}
+
+[data-theme="dark"] .notification-text {
+    color: #bbb;
+}
+
+[data-theme="dark"] .notification-time {
+    color: #888;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .notification-icon {
+        flex: 0 0 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+}

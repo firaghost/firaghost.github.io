@@ -1,0 +1,274 @@
+/**
+ * Light Theme Styles for Legal Case Management System Dashboard
+ */
+
+/* Base Styles */
+body {
+    background-color: #f7f7f7;
+    color: #2A3F54;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Cards */
+.dashboard-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.stat-icon {
+    font-size: 36px;
+    color: #26B99A;
+    margin-right: 20px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover .stat-icon {
+    transform: scale(1.1);
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2A3F54;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: #73879C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-footer {
+    padding: 10px 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #26B99A;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card-footer:hover {
+    background: #f2f2f2;
+    color: #1a8774;
+    text-decoration: none;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background: linear-gradient(135deg, #2A3F54, #26B99A);
+    color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2A3F54;
+    padding: 12px 15px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-top: 1px solid #e9ecef;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Card Header */
+.card-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2A3F54;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-running {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-important {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-archived {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Action Buttons */
+.btn-primary {
+    background: #26B99A;
+    border-color: #26B99A;
+}
+
+.btn-primary:hover {
+    background: #1a8774;
+    border-color: #1a8774;
+}
+
+.btn-secondary {
+    background: #2A3F54;
+    border-color: #2A3F54;
+}
+
+.btn-secondary:hover {
+    background: #1f2f3d;
+    border-color: #1f2f3d;
+}
+
+.btn-sm {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* Forms */
+.form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+.form-control:focus {
+    border-color: #26B99A;
+    box-shadow: 0 0 0 0.2rem rgba(38, 185, 154, 0.25);
+}
+
+/* Navbar */
+.top_nav {
+    background: #2A3F54;
+}
+
+.nav_menu {
+    background: #2A3F54;
+}
+
+.nav.navbar-nav > li > a {
+    color: #fff;
+}
+
+.nav.navbar-nav > li > a:hover {
+    background: #1f2f3d;
+}
+
+/* Left Sidebar */
+.left_col {
+    background: #2A3F54;
+}
+
+.nav_title {
+    background: #2A3F54;
+}
+
+.nav.side-menu > li > a {
+    color: #fff;
+}
+
+.nav.side-menu > li.active > a {
+    background: #1a2836;
+    color: #fff;
+}
+
+.nav.side-menu > li > a:hover {
+    background: #1a2836;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dashboard-header {
+        padding: 20px;
+    }
+    
+    .dashboard-title {
+        font-size: 20px;
+    }
+    
+    .dashboard-subtitle {
+        font-size: 14px;
+    }
+    
+    .card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .stat-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

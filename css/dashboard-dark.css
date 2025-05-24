@@ -1,0 +1,253 @@
+/**
+ * Dark Theme Styles for Legal Case Management System Dashboard
+ */
+
+/* Base Styles */
+[data-theme="dark"] body {
+    background-color: #1a1a2e;
+    color: #e6e6e6;
+}
+
+/* Dashboard Cards */
+[data-theme="dark"] .dashboard-card {
+    background: #282838;
+    border-color: #393950;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .dashboard-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .stat-icon {
+    color: #4ecdc4;
+}
+
+[data-theme="dark"] .stat-number {
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .stat-label {
+    color: #a0a0b0;
+}
+
+[data-theme="dark"] .card-footer {
+    background: #20203a;
+    border-top-color: #393950;
+    color: #4ecdc4;
+}
+
+[data-theme="dark"] .card-footer:hover {
+    background: #31314e;
+    color: #4ecdc4;
+}
+
+/* Dashboard Header */
+[data-theme="dark"] .dashboard-header {
+    background: linear-gradient(135deg, #1a1a2e, #4ecdc4);
+}
+
+/* Table Styling */
+[data-theme="dark"] .table {
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .table th {
+    background: #20203a;
+    color: #e4e6f0;
+    border-bottom-color: #393950;
+}
+
+[data-theme="dark"] .table td {
+    border-top-color: #393950;
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+    background-color: #31314e;
+}
+
+/* Card Header */
+[data-theme="dark"] .card-header {
+    background: #282838;
+    border-bottom-color: #393950;
+}
+
+[data-theme="dark"] .card-title {
+    color: #e4e6f0;
+}
+
+/* Status Badges */
+[data-theme="dark"] .status-running {
+    background: #1e4a3a;
+    color: #7ee2c6;
+}
+
+[data-theme="dark"] .status-important {
+    background: #4a3c1e;
+    color: #e2c67e;
+}
+
+[data-theme="dark"] .status-archived {
+    background: #4a1e1e;
+    color: #e27e7e;
+}
+
+/* Action Buttons */
+[data-theme="dark"] .btn-primary {
+    background: #4ecdc4;
+    border-color: #4ecdc4;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    background: #3dbeb6;
+    border-color: #3dbeb6;
+}
+
+[data-theme="dark"] .btn-secondary {
+    background: #31314e;
+    border-color: #31314e;
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background: #3e3e64;
+    border-color: #3e3e64;
+}
+
+/* Forms */
+[data-theme="dark"] .form-control {
+    background-color: #20203a;
+    border-color: #393950;
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .form-control:focus {
+    border-color: #4ecdc4;
+    box-shadow: 0 0 0 0.2rem rgba(78, 205, 196, 0.25);
+    background-color: #20203a;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: #8888a0;
+}
+
+/* Navbar */
+[data-theme="dark"] .top_nav {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .nav_menu {
+    background: #1a1a2e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .nav.navbar-nav > li > a {
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .nav.navbar-nav > li > a:hover {
+    background: #31314e;
+}
+
+/* Left Sidebar */
+[data-theme="dark"] .left_col {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .nav_title {
+    background: #1a1a2e;
+}
+
+[data-theme="dark"] .nav.side-menu > li > a {
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .nav.side-menu > li.active > a {
+    background: #31314e;
+    color: #4ecdc4;
+}
+
+[data-theme="dark"] .nav.side-menu > li > a:hover {
+    background: #31314e;
+    color: #4ecdc4;
+}
+
+[data-theme="dark"] .nav.child_menu {
+    background: #20203a;
+}
+
+[data-theme="dark"] .nav.child_menu > li > a {
+    color: #a0a0b0;
+}
+
+[data-theme="dark"] .nav.child_menu > li > a:hover {
+    color: #e4e6f0;
+    background: #31314e;
+}
+
+/* Profile Section */
+[data-theme="dark"] .profile_info span {
+    color: #a0a0b0;
+}
+
+[data-theme="dark"] .profile_info h2 {
+    color: #e4e6f0;
+}
+
+/* Dropdown Menu */
+[data-theme="dark"] .dropdown-menu {
+    background: #282838;
+    border-color: #393950;
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: #e4e6f0;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background: #31314e;
+    color: #4ecdc4;
+}
+
+/* Modal */
+[data-theme="dark"] .modal-content {
+    background: #282838;
+    border-color: #393950;
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+    border-color: #393950;
+}
+
+[data-theme="dark"] .close {
+    color: #e4e6f0;
+}
+
+/* Scrollbar Styling */
+[data-theme="dark"] ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #20203a;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #393950;
+    border-radius: 4px;
+}
+
+[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #4a4a64;
+}
+
+/* Sidebar Section Headers */
+[data-theme="dark"] .sidebar-section h4 {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .main-nav-section h4 {
+    color: rgba(255, 255, 255, 0.8) !important;
+    border-bottom-color: rgba(255, 255, 255, 0.2) !important;
+}

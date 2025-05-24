@@ -1,0 +1,144 @@
+/* Enhanced Sidebar Styling for Legal Case Management System */
+.sidebar-section {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    pointer-events: none;
+}
+
+.sidebar-section h4 {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px 5px;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Main Navigation Heading - Bigger and more prominent */
+.main-nav-section h4 {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    letter-spacing: 1.5px !important;
+    padding: 15px 15px 10px !important;
+    margin-bottom: 5px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.nav.side-menu > li {
+    margin-bottom: 2px;
+}
+
+.nav.side-menu > li > a {
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.nav.side-menu > li.active > a,
+.nav.side-menu > li > a:hover {
+    background: rgba(38, 185, 154, 0.2);
+    color: #26B99A;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+/* Light theme specific hover styles */
+body.nav-md .nav.side-menu > li.active > a,
+body.nav-md .nav.side-menu > li > a:hover {
+    background: rgba(38, 185, 154, 0.1);
+}
+
+/* Dark theme specific hover styles */
+[data-theme="dark"] body.nav-md .nav.side-menu > li.active > a,
+[data-theme="dark"] body.nav-md .nav.side-menu > li > a:hover {
+    background: rgba(38, 185, 154, 0.2);
+    color: #4ecdc4;
+}
+
+/* Child menu styling */
+.nav.child_menu {
+    padding: 5px 0;
+    margin: 0 15px;
+    border-radius: 4px;
+}
+
+.nav.child_menu > li > a {
+    padding: 8px 15px 8px 32px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.nav.child_menu > li > a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-left: 35px;
+}
+
+/* Badge styling */
+.badge {
+    background-color: #26B99A;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+.side-menu .badge {
+    float: right;
+    margin-top: 2px;
+}
+
+/* Audit log specific styles */
+.audit-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] .sidebar-section h4 {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .nav.side-menu > li > a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="dark"] .nav.side-menu > li.active > a,
+[data-theme="dark"] .nav.side-menu > li > a:hover {
+    color: #4ecdc4;
+}
+
+[data-theme="dark"] .nav.child_menu {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .nav.child_menu > li > a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] .nav.child_menu > li > a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .sidebar-section h4 {
+        font-size: 11px;
+    }
+    
+    .nav.side-menu > li > a {
+        padding: 8px 12px;
+        margin: 0 8px;
+    }
+}

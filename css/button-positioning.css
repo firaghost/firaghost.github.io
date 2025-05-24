@@ -1,0 +1,139 @@
+/**
+ * Button Positioning Styles for Legal Case Management System
+ */
+
+/* Action Buttons Positioning */
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.action-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.action-buttons .btn i {
+    font-size: 14px;
+}
+
+/* Card Action Buttons */
+.card-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 4px;
+}
+
+.card-actions .btn i {
+    font-size: 14px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.filter-buttons .btn i {
+    margin-right: 5px;
+}
+
+/* Floating Action Button */
+.floating-action-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #26B99A;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.floating-action-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: #1a8774;
+    color: #fff;
+}
+
+.floating-action-btn i {
+    font-size: 24px;
+}
+
+/* Button Positioning in Forms */
+.form-group .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .form-actions {
+    border-top-color: #393950;
+}
+
+[data-theme="dark"] .floating-action-btn {
+    background: #4ecdc4;
+}
+
+[data-theme="dark"] .floating-action-btn:hover {
+    background: #3dbeb6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .filter-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .form-actions .btn {
+        width: 100%;
+    }
+    
+    .floating-action-btn {
+        bottom: 20px;
+        right: 20px;
+    }
+}
